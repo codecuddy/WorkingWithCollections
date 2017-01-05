@@ -11,6 +11,7 @@ namespace WorkingWithCollections
     {
         static void Main(string[] args)
         {
+            /*
             Car car1 = new Car();
             car1.Make = "Dodge";
             car1.Model = "Neon";
@@ -25,6 +26,10 @@ namespace WorkingWithCollections
             b1.Author = "Charlie Cuddy";
             b1.Title = "Learning .NET";
             b1.ISBN = "0-000-00000-0";
+            */
+
+
+
 
             /* OLD STYLE... allowed you to add anything to the collection...
                so if searching for car.Make and their was a book in the collection
@@ -46,7 +51,8 @@ namespace WorkingWithCollections
             */
 
 
-            // ##### Probably the MOST POPULAR form of collections ###### 
+
+            // ##### Probably the MOST POPULAR form of COLLECTIONS ###### 
 
             /*
             // List<T>
@@ -61,6 +67,10 @@ namespace WorkingWithCollections
                 Console.WriteLine(car.Model);
             }
             */
+
+
+
+
 
             /*
             // ##### DICTIONARIES are another popular collection however
@@ -77,6 +87,23 @@ namespace WorkingWithCollections
             Console.WriteLine(myDictionary["VIN-A2"].Model);
             */
 
+            /*
+            // we can initialize like we saw before in arrays
+            //string[] names = {"Charlie", "Jenny", "Josie", "Jax", "Penny"};
+
+            // Object Initializer syntax
+            // No need for a Constructor
+            Car car1 = new Car() { Make = "BMW", Model = "Super Awesome", VIN = "VIN-A3" };
+            Car car2 = new Car() { Make = "Lexus", Model = "So fast and pretty", VIN = "VIN-A4" };
+            */
+
+            // COLLECTION INITIALIZER
+
+            List<Car> myList = new List<Car>()
+            {
+                new Car { Make = "Oldsmobile", Model = "Cutlas Supreme", VIN = "VIN-A5" },
+                new Car { Make = "Something else", Model = "another one", VIN = "VIN-A6" }
+            };
 
             Console.ReadLine();
         }
