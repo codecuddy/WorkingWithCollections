@@ -14,10 +14,12 @@ namespace WorkingWithCollections
             Car car1 = new Car();
             car1.Make = "Dodge";
             car1.Model = "Neon";
+            car1.VIN = "VIN-A1";
 
             Car car2 = new Car();
             car2.Make = "Chevy";
             car2.Model = "Equinox";
+            car2.VIN = "VIN-A2";
 
             Book b1 = new Book();
             b1.Author = "Charlie Cuddy";
@@ -43,6 +45,10 @@ namespace WorkingWithCollections
             }
             */
 
+
+            // ##### Probably the MOST POPULAR form of collections ###### 
+
+            /*
             // List<T>
             List<Car> myList = new List<Car>();
             myList.Add(car1);
@@ -54,6 +60,23 @@ namespace WorkingWithCollections
                 Console.WriteLine(car.Make);
                 Console.WriteLine(car.Model);
             }
+            */
+
+            /*
+            // ##### DICTIONARIES are another popular collection however
+            // TKey is unique to each entry, like the work you look up
+            // TValue is the definition... any data type... written as....
+            // Dictionary<TKey, TValue>
+
+            Dictionary<string, Car> myDictionary = new Dictionary<string, Car>();
+
+            myDictionary.Add(car1.VIN, car1);
+            myDictionary.Add(car2.VIN, car2);
+
+            Console.WriteLine(myDictionary["VIN-A1"].Make);
+            Console.WriteLine(myDictionary["VIN-A2"].Model);
+            */
+
 
             Console.ReadLine();
         }
@@ -61,6 +84,7 @@ namespace WorkingWithCollections
 
     class Car
     {
+        public string VIN { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
     }
